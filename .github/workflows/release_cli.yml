@@ -3,6 +3,15 @@ name: Release CLI
 # When main is pushed and npm/oxc/package.json has been changed,
 # trigger the jobs after the ci workflow has been passed.
 on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'crates/**'
+      - 'tasks/**'
+      - 'Cargo.toml'
+      - 'Cargo.lock'
+      - 'rust-toolchain.toml'
+      - '!**/*.md'
   push:
     paths:
       - npm/oxc/package.json
