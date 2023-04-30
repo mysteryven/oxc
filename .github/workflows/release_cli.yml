@@ -4,8 +4,6 @@ name: Release CLI
 # trigger the jobs after the ci workflow has been passed.
 on:
   push:
-    branches:
-      - main
     paths:
       - npm/oxc/package.json
   workflow_run:
