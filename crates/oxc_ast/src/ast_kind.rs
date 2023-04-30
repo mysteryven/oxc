@@ -45,7 +45,6 @@ pub enum AstKind<'a> {
     PrivateIdentifier(&'a PrivateIdentifier),
 
     NumberLiteral(&'a NumberLiteral<'a>),
-    NumberLiteral2(&'a NumberLiteral<'a>),
     StringLiteral(&'a StringLiteral),
     BooleanLiteral(&'a BooleanLiteral),
     NullLiteral(&'a NullLiteral),
