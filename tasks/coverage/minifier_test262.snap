@@ -1,7 +1,6 @@
 Minifier_Test262 Summary:
 AST Parsed     : 44676/44676 (100.00%)
-Positive Passed: 44159/44676 (98.84%)
-Expect to Parse: "annexB/language/expressions/assignment/dstr/object-pattern-emulates-undefined.js"
+Positive Passed: 44166/44676 (98.86%)
 Expect to Parse: "annexB/language/function-code/if-stmt-else-decl-func-block-scoping.js"
 Expect to Parse: "annexB/language/function-code/if-stmt-else-decl-func-existing-block-fn-no-init.js"
 Expect to Parse: "annexB/language/function-code/if-stmt-else-decl-func-existing-block-fn-update.js"
@@ -123,7 +122,6 @@ Expect to Parse: "language/expressions/arrow-function/throw-new.js"
 Expect to Parse: "language/expressions/assignment/S11.13.1_A2.1_T2.js"
 Expect to Parse: "language/expressions/assignment/S11.13.1_A3.2.js"
 Expect to Parse: "language/expressions/assignment/S11.13.1_A4_T2.js"
-Expect to Parse: "language/expressions/assignment/destructuring/keyed-destructuring-property-reference-target-evaluation-order.js"
 Expect to Parse: "language/expressions/assignment/dstr/array-elem-init-fn-name-cover.js"
 Expect to Parse: "language/expressions/assignment/dstr/obj-id-init-fn-name-cover.js"
 Expect to Parse: "language/expressions/assignment/dstr/obj-prop-elem-init-fn-name-cover.js"
@@ -426,11 +424,6 @@ Expect to Parse: "language/statements/class/dstr/private-meth-static-dflt-ary-pt
 Expect to Parse: "language/statements/class/dstr/private-meth-static-dflt-obj-ptrn-id-init-fn-name-cover.js"
 Expect to Parse: "language/statements/class/dstr/private-meth-static-obj-ptrn-id-init-fn-name-cover.js"
 Expect to Parse: "language/statements/class/elements/nested-indirect-eval-contains-arguments.js"
-Expect to Parse: "language/statements/class/elements/privatefieldset-evaluation-order-1.js"
-Expect to Parse: "language/statements/class/elements/privatefieldset-evaluation-order-2.js"
-Expect to Parse: "language/statements/class/elements/privatefieldset-evaluation-order-3.js"
-Expect to Parse: "language/statements/class/elements/privatefieldset-typeerror-11.js"
-Expect to Parse: "language/statements/class/elements/privatefieldset-typeerror-9.js"
 Expect to Parse: "language/statements/class/scope-name-lex-open-heritage.js"
 Expect to Parse: "language/statements/class/subclass/superclass-arrow-function.js"
 Expect to Parse: "language/statements/const/dstr/ary-ptrn-elem-id-init-fn-name-cover.js"

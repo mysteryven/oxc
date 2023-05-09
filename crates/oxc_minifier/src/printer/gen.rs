@@ -1194,11 +1194,19 @@ impl<'a> Gen for ConditionalExpression<'a> {
 
 impl<'a> Gen for AssignmentExpression<'a> {
     fn gen(&self, p: &mut Printer) {
+        let has_assign_pattern = matches!(self.left, AssignmentTarget::AssignmentTargetPattern(_));
+        if has_assign_pattern {
+            p.print_str(b"(");
+        }
         self.left.gen(p);
         p.print_space();
         p.print_str(self.operator.as_str().as_bytes());
         p.print_space();
         self.right.gen(p);
+
+        if has_assign_pattern {
+            p.print_str(b")");
+        }
     }
 }
 
