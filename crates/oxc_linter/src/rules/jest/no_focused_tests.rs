@@ -54,7 +54,7 @@ declare_oxc_lint!(
     /// `();
     /// ```
     NoFocusedTests,
-    suspicious
+    nursery
 );
 
 impl Rule for NoFocusedTests {
@@ -78,9 +78,7 @@ impl Rule for NoFocusedTests {
             return;
         }
 
-        let only_node = members.iter().find(|member| {
-            member.is_name_equal("only")
-        });
+        let only_node = members.iter().find(|member| member.is_name_equal("only"));
         if let Some(only_node) = only_node {
             ctx.diagnostic_with_fix(NoFocusedTestsDiagnostic(call_expr.span), || {
                 let span = only_node.span;
@@ -114,6 +112,8 @@ fn test() {
         ("test.each()()", None),
         ("test.each`table`()", None),
         ("test.concurrent()", None),
+        // with import
+        // ("import { describe as fdescribe } from '@jest/globals'; fdescribe()", None),
     ];
 
     let fail = vec![
@@ -137,6 +137,14 @@ fn test() {
         ("fit()", None),
         ("fit.each()()", None),
         ("fit.each`table`()", None),
+        // with import
+        // ("const { describe } = require('@jest/globals'); describe.only()", None),
+        // ("import { describe as describeThis } from '@jest/globals'; describeThis.only()", None),
+        // (" const { fdescribe } = require('@jest/globals');fdescribe()", None),
+        // with alias
+        // ("import { describe as describeThis } from '@jest/globals'; describeThis.only()", None),
+        // (" import { fdescribe as describeJustThis } from '@jest/globals'; describeJustThis() describeJustThis.each()()", None),
+        // (" import { describe as context } from '@jest/globals'; context.only.each()()", None)
     ];
 
     let fix = vec![
