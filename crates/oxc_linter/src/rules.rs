@@ -122,6 +122,7 @@ mod jest {
     pub mod valid_describe_callback;
     pub mod valid_expect;
     pub mod valid_title;
+    pub mod prefer_todo;
 }
 
 mod react {
@@ -255,6 +256,7 @@ oxc_macros::declare_all_lint_rules! {
     jest::valid_describe_callback,
     jest::valid_expect,
     jest::valid_title,
+    jest::prefer_todo,
     unicorn::catch_error_name,
     unicorn::error_message,
     unicorn::filename_case,

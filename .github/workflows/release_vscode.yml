@@ -68,7 +68,7 @@ jobs:
         shell: bash
         run: |
           BIN_NAME=oxc-${{ matrix.code-target }}
-          mv target/${{ matrix.target }}/release/oxc_cli.exe $BIN_NAME.exe
+          mv target/${{ matrix.target }}/release/oxc_vscode.exe $BIN_NAME.exe
           7z a $BIN_NAME.zip $BIN_NAME.exe
 
       # The binary is zipped to fix permission loss https://github.com/actions/upload-artifact#permission-loss
@@ -76,7 +76,7 @@ jobs:
         if: runner.os != 'Windows'
         run: |
           BIN_NAME=oxc-${{ matrix.code-target }}
-          mv target/${{ matrix.target }}/release/oxc_cli $BIN_NAME
+          mv target/${{ matrix.target }}/release/oxc_vscode $BIN_NAME
           tar czf $BIN_NAME.tar.gz $BIN_NAME
 
       - name: Upload Binary
