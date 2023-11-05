@@ -119,10 +119,10 @@ mod jest {
     pub mod no_mocks_import;
     pub mod no_standalone_expect;
     pub mod no_test_prefixes;
+    pub mod prefer_todo;
     pub mod valid_describe_callback;
     pub mod valid_expect;
     pub mod valid_title;
-    pub mod prefer_todo;
 }
 
 mod react {

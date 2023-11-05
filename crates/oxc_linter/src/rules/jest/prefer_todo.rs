@@ -57,13 +57,13 @@ impl Rule for PreferTodo {
         if let AstKind::CallExpression(call_expr) = node.kind() {
             let counts = call_expr.arguments.len();
             if !is_type_of_jest_fn_call(
-                    call_expr,
-                    node,
-                    ctx,
-                    &[JestFnKind::General(JestGeneralFnKind::Test)],
-                ) {
-                    return
-                }
+                call_expr,
+                node,
+                ctx,
+                &[JestFnKind::General(JestGeneralFnKind::Test)],
+            ) {
+                return;
+            }
 
             if counts < 1
                 || should_filter_case(call_expr)
