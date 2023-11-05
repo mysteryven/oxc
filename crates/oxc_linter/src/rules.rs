@@ -119,6 +119,7 @@ mod jest {
     pub mod no_mocks_import;
     pub mod no_standalone_expect;
     pub mod no_test_prefixes;
+    pub mod prefer_todo;
     pub mod valid_describe_callback;
     pub mod valid_expect;
     pub mod valid_title;
@@ -263,6 +264,7 @@ oxc_macros::declare_all_lint_rules! {
     jest::valid_describe_callback,
     jest::valid_expect,
     jest::valid_title,
+    jest::prefer_todo,
     unicorn::catch_error_name,
     unicorn::error_message,
     unicorn::filename_case,
