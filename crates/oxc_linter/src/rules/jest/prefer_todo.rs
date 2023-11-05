@@ -56,7 +56,6 @@ impl Rule for PreferTodo {
     fn run<'a>(&self, node: &AstNode<'a>, ctx: &LintContext<'a>) {
         if let AstKind::CallExpression(call_expr) = node.kind() {
             let counts = call_expr.arguments.len();
-
             if !is_type_of_jest_fn_call(
                     call_expr,
                     node,
